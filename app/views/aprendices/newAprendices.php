@@ -23,7 +23,6 @@
                 <select name="fkIdProyecto" id="fkIdProyecto" class="form-control" required>
                     <option value="">Seleccione un Proyecto</option>
                     <?php
-                        // Aquí se debe cargar la lista de proyectos desde la base de datos
                         foreach ($proyectos as $proyecto) {
                             echo "<option value='$proyecto->id_proyecto'>$proyecto->nombre</option>";
                         }

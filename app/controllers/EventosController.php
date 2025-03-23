@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\EventosModel;
+use App\Models\ProyectoModel;
 
 require_once 'baseController.php';
 require_once MAIN_APP_ROUTE . '../models/EventosModel.php';
@@ -26,7 +27,10 @@ class EventosController extends BaseController
     }
 
     public function newEvento() {
+        $proyectoObj = new ProyectoModel();
+        $proyectos = $proyectoObj->getAll(); // Cargar proyectos
         $data = [
+            "proyectos" => $proyectos, 
             "title" => "Nuevo Evento"
         ];
         $this->render('eventos/newEventos.php', $data);
@@ -50,8 +54,13 @@ class EventosController extends BaseController
     {
         $eventosObj = new EventosModel();
         $eventoInfo = $eventosObj->getEvento($id);
+        
+        $proyectoObj = new ProyectoModel();
+        $proyectos = $proyectoObj->getAll(); // Cargar proyectos
+
         $data = [
             "evento" => $eventoInfo,
+            "proyectos" => $proyectos, // Pasar proyectos
             "title" => "Editar Evento"
         ];
         $this->render('eventos/editEventos.php', $data);

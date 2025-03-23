@@ -3,6 +3,10 @@ require_once '../app/config/global.php';
 require_once '../app/controllers/AprendicesController.php';
 require_once '../app/controllers/EventosController.php';
 require_once '../app/controllers/ProyectoController.php';
+require_once '../app/controllers/TipoAsesoriaController.php';
+require_once '../app/controllers/AsesoriaController.php';
+require_once '../app/controllers/PersonalTenicoController.php';
+require_once '../app/controllers/ReunionController.php';
 
 $url = $_SERVER['REQUEST_URI']; //Lo que se ingresa en la URL
 $routes = include_once '../app/config/routes.php';

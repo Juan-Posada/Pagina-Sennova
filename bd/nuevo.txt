@@ -1,0 +1,21 @@
+hola, necesito que leas y analices mis dos proyectos, tomando como base 'gymcpic' para aportar nuevas implementaciones a 'Pagina-Sennova'. Necesito crear rutas, controller, model y vistas, de la tabla 'reunion' de mi base de datos. Esta, será incluida dentro de 'Pagina-sennova'. Usa todas tus capacidades para integrar la tabla al modelo, tomando como plantilla lo que ya está creado en 'gymcpic' creando funciones y métodos o archivos necesarios para view, viewOne, edit, new y delete. PASAME TODOS LOS NUEVOS ARCHUIVOS COMPLETOS CON TODAS SUSU FUNCIONES. Tabla en base de datos (tener en cuneta todas las columnas): 
+CREATE TABLE IF NOT EXISTS `pagina_sennova`.`reunion` (
+  `id_reunion` INT NOT NULL AUTO_INCREMENT,
+  `fecha` DATE NOT NULL,
+  `lugar` VARCHAR(45) NULL,
+  `hora_inicio` TIME NOT NULL,
+  `hora_fin` TIME NOT NULL,
+  `fk_id_proyecto` INT NOT NULL,
+  `fk_id_tipo_asesoria` INT NOT NULL,
+  PRIMARY KEY (`id_reunion`),
+  CONSTRAINT `fk_reunion_id_proyecto`
+    FOREIGN KEY (`fk_id_proyecto`)
+    REFERENCES `pagina_sennova`.`proyecto` (`id_proyecto`)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_reunion_id_tipo_asesoria`
+    FOREIGN KEY (`fk_id_tipo_asesoria`)
+    REFERENCES `pagina_sennova`.`tipo_asesoria` (`id_tipo_asesoria`)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE)
+ENGINE = InnoDB;

@@ -28,7 +28,7 @@ class AprendicesController extends BaseController
 
     public function newAprendiz() {
         $proyectoObj = new ProyectoModel();
-        $proyectos = $proyectoObj->getAll();
+        $proyectos = $proyectoObj->getAll(); // Cargar proyectos
         $data = [
             "proyectos" => $proyectos, 
             "title" => "Nuevo Aprendiz"
@@ -55,8 +55,13 @@ class AprendicesController extends BaseController
     {
         $aprendicesObj = new AprendicesModel();
         $aprendizInfo = $aprendicesObj->getAprendiz($id);
+        
+        $proyectoObj = new ProyectoModel();
+        $proyectos = $proyectoObj->getAll(); // Cargar proyectos
+
         $data = [
             "aprendiz" => $aprendizInfo,
+            "proyectos" => $proyectos, // Pasar proyectos
             "title" => "Editar Aprendiz"
         ];
         $this->render('aprendices/editAprendices.php', $data);

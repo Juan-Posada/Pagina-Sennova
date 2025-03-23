@@ -7,6 +7,7 @@
     <title> <?php echo $title ?> </title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style_admin_layout.css">
+    <link rel="shortcut icon" href="/img/logo-sena.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -15,7 +16,7 @@
         <aside class="sidebar">
             <div class="sidebar-content">
                 <div class="logo">
-                    <img src="/img/" alt="logoImg">
+                    <img src="/img/logo-sennova.png" alt="logoImg">
                     <span class="logo-text">SENNOVA</span>
                 </div>
                 <nav class="menu">
@@ -23,6 +24,10 @@
                         <li><a href="/proyecto/view"><i class="fas fa-users"></i><span class="span">Proyectos</span></a></li>
                         <li><a href="/eventos/view"><i class="fas fa-user"></i><span class="span">Eventos</span></a></li>
                         <li><a href="/aprendices/view"><i class="fas fa-id-badge"></i><span class="span">Aprendices</span></a></li>
+                        <li><a href="/asesoria/view"><i class="fas fa-font"></i><span class="span">Asesorías</span></a></li>
+                        <li><a href="/tipoAsesoria/view"><i class="fas fa-tag"></i><span class="span">Tipos de Asesoría</span></a></li>
+                        <li><a href="/personalTecnico/view"><i class="fas fa-person"></i><span class="span">Personal Técnico</span></a></li>
+                        <li><a href="/reunion/view"><i class="fas fa-handshake"></i><span class="span">Reunión</span></a></li>
                     </ul>
                 </nav>
             </div>
