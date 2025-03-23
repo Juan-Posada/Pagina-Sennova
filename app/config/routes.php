@@ -1,108 +1,110 @@
 <?php
-    return [
-        "/" => [
-            "controller" => "App\Controllers\HomeController",
-            "action" => "index"
-        ],
-        // Eventos
-"/evento/index" => [
-    "controller" => "App\Controllers\EventoController",
-    "action" => "index"
-],
-"/evento/view" => [
-    "controller" => "App\Controllers\EventoController",
-    "action" => "view"
-],
-"/evento/new" => [
-    "controller" => "App\Controllers\EventoController",
-    "action" => "newEvento"
-],
-"/evento/create" => [
-    "controller" => "App\Controllers\EventoController",
-    "action" => "createEvento"
-],
-"/evento/view/(\d+)" => [
-    "controller" => "App\Controllers\EventoController",
-    "action" => "viewEvento"
-],
-"/evento/edit/(\d+)" => [
-    "controller" => "App\Controllers\EventoController",
-    "action" => "editEvento"
-],
-"/evento/update" => [
-    "controller" => "App\Controllers\EventoController",
-    "action" => "updateEvento"
-],
-"/evento/delete/(\d+)" => [
-    "controller" => "App\Controllers\EventoController",
-    "action" => "deleteEvento"
-],
-// Proyectos
-"/proyecto/index" => [
-    "controller" => "App\Controllers\ProyectoController",
-    "action" => "index"
-],
-"/proyecto/view" => [
-    "controller" => "App\Controllers\ProyectoController",
-    "action" => "view"
-],
-"/proyecto/new" => [
-    "controller" => "App\Controllers\ProyectoController",
-    "action" => "newProyecto"
-],
-"/proyecto/create" => [
-    "controller" => "App\Controllers\ProyectoController",
-    "action" => "createProyecto"
-],
-"/proyecto/view/(\d+)" => [
-    "controller" => "App\Controllers\ProyectoController",
-    "action" => "viewProyecto"
-],
-"/proyecto/edit/(\d+)" => [
-    "controller" => "App\Controllers\ProyectoController",
-    "action" => "editProyecto"
-],
-"/proyecto/update" => [
-    "controller" => "App\Controllers\ProyectoController",
-    "action" => "updateProyecto"
-],
-"/proyecto/delete/(\d+)" => [
-    "controller" => "App\Controllers\ProyectoController",
-    "action" => "deleteProyecto"
-],
-// Aprendices
-"/aprendiz/index" => [
-    "controller" => "App\Controllers\AprendizController",
-    "action" => "index"
-],
-"/aprendiz/view" => [
-    "controller" => "App\Controllers\AprendizController",
-    "action" => "view"
-],
-"/aprendiz/new" => [
-    "controller" => "App\Controllers\AprendizController",
-    "action" => "newAprendiz"
-],
-"/aprendiz/create" => [
-    "controller" => "App\Controllers\AprendizController",
-    "action" => "createAprendiz"
-],
-"/aprendiz/view/(\d+)" => [
-    "controller" => "App\Controllers\AprendizController",
-    "action" => "viewAprendiz"
-],
-"/aprendiz/edit/(\d+)" => [
-    "controller" => "App\Controllers\AprendizController",
-    "action" => "editAprendiz"
-],
-"/aprendiz/update" => [
-    "controller" => "App\Controllers\AprendizController",
-    "action" => "updateAprendiz"
-],
-"/aprendiz/delete/(\d+)" => [
-    "controller" => "App\Controllers\AprendizController",
-    "action" => "deleteAprendiz"
-],
+return [
+    "/" => [
+        "controller" => "App\Controllers\HomeController",
+        "action" => "index"
+    ],
+    
+    // Rutas para Proyecto
+    "/proyecto/view" => [
+        "controller" => "App\Controllers\ProyectoController",
+        "action" => "view"
+    ],
+    "/proyecto/new" => [
+        "controller" => "App\Controllers\ProyectoController",
+        "action" => "newProyecto"
+    ],
+    "/proyecto/create" => [
+        "controller" => "App\Controllers\ProyectoController",
+        "action" => "createProyecto"
+    ],
+    "/proyecto/edit/(\d+)" => [
+        "controller" => "App\Controllers\ProyectoController",
+        "action" => "editProyecto"
+    ],
+    "/proyecto/update" => [
+        "controller" => "App\Controllers\ProyectoController",
+        "action" => "updateProyecto"
+    ],
+    "/proyecto/delete/(\d+)" => [
+        "controller" => "App\Controllers\ProyectoController",
+        "action" => "deleteProyecto"
+    ],
+    "/proyecto/remove" => [
+        "controller" => "App\Controllers\ProyectoController",
+        "action" => "remove"
+    ],
+    "/proyecto/view/(\d+)" => [
+        "controller" => "App\Controllers\ProyectoController",
+        "action" => "viewOneProyecto"
+    ],
+    
+    // Rutas para Eventos
+    "/eventos/view" => [
+        "controller" => "App\Controllers\EventosController",
+        "action" => "view"
+    ],
+    "/eventos/new" => [
+        "controller" => "App\Controllers\EventosController",
+        "action" => "newEvento"
+    ],
+    "/eventos/create" => [
+        "controller" => "App\Controllers\EventosController",
+        "action" => "createEvento"
+    ],
+    "/eventos/edit/(\d+)" => [
+        "controller" => "App\Controllers\EventosController",
+        "action" => "editEvento"
+    ],
+    "/eventos/update" => [
+        "controller" => "App\Controllers\EventosController",
+        "action" => "updateEvento"
+    ],
+    "/eventos/delete/(\d+)" => [
+        "controller" => "App\Controllers\EventosController",
+        "action" => "deleteEvento"
+    ],
+    "/eventos/remove" => [
+        "controller" => "App\Controllers\EventosController",
+        "action" => "remove"
+    ],
+    "/eventos/view/(\d+)" => [
+        "controller" => "App\Controllers\EventosController",
+        "action" => "viewOneEvento"
+    ],
 
-    ];
+     // Rutas para Aprendices
+    "/aprendices/view" => [
+        "controller" => "App\Controllers\AprendicesController",
+        "action" => "view"
+    ],
+    "/aprendices/new" => [
+        "controller" => "App\Controllers\AprendicesController",
+        "action" => "newAprendiz"
+    ],
+    "/aprendices/create" => [
+        "controller" => "App\Controllers\AprendicesController",
+        "action" => "createAprendiz"
+    ],
+    "/aprendices/edit/(\d+)" => [
+        "controller" => "App\Controllers\AprendicesController",
+        "action" => "editAprendiz"
+    ],
+    "/aprendices/update" => [
+        "controller" => "App\Controllers\AprendicesController",
+        "action" => "updateAprendiz"
+    ],
+    "/aprendices/delete/(\d+)" => [
+        "controller" => "App\Controllers\AprendicesController",
+        "action" => "deleteAprendiz"
+    ],
+    "/aprendices/remove" => [
+        "controller" => "App\Controllers\AprendicesController",
+        "action" => "remove"
+    ],
+    "/aprendices/view/(\d+)" => [
+        "controller" => "App\Controllers\AprendicesController",
+        "action" => "viewOneAprendiz"
+    ],
+];
 ?>

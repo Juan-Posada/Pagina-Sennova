@@ -1,30 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyecto</title>
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-  <header>
-    <h1>PROYECTO FORMATIVO - SENNOVA</h1>
-  </header>
-  <div class="container">
-    <div class="data-container">
-      <?php
-        if($proyecto && is_object($proyecto)){
-          echo "<div class='record'>
-                  <span>ID: $proyecto->id_proyecto - </span>
-                  <span>Nombre: $proyecto->nombre - </span>
-                  <span>Descripción: $proyecto->descripcion</span>
-                </div>";
-        }
-      ?>
+<div class="data-container">
+    <div class="navegate-group">
+        <div class="back">
+            <a href="/proyecto/view"><img src="/img/back.svg"></a>
+        </div>
     </div>
-  </div>
-  <footer>
-    <p>Desarrollo ADSO 2873711</p>
-  </footer>
-</body>
-</html>
+    <div class="info">
+    <?php
+        if($proyecto && is_object($proyecto)){
+            echo "
+                <div class='record-one'>
+                    <span>ID: $proyecto->id_proyecto</span>
+                    <span>Nombre: $proyecto->nombre</span>
+                </div>
+            ";      
+        }
+    ?>
+    </div>
+</div>

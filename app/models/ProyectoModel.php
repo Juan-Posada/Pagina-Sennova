@@ -1,51 +1,67 @@
 <?php
+
 namespace App\Models;
+
 use PDO;
 use PDOException;
 
-class ProyectoModel {
-    private $db;
-    
-    public function __construct($conexion) {
-        $this->db = $conexion;
+require_once MAIN_APP_ROUTE . '../models/BaseModel.php';
+
+class ProyectoModel extends BaseModel
+{
+    public function __construct()
+    {
+        $this->table = "proyecto"; // Nombre de la tabla en la base de datos
+        parent::__construct();
     }
 
-    public function getAll() {
-        $sql = "SELECT * FROM proyectos";
-        $query = $this->db->query($sql);
-        return $query->fetchAll(PDO::FETCH_OBJ);
+    public function saveProyecto($nombre)
+    {
+        try {
+            $sql = "INSERT INTO $this->table (nombre) VALUES (:nombre)";
+            $statement = $this->dbConnection->prepare($sql);
+            $statement->bindParam(':nombre', $nombre, PDO::PARAM_STR);
+            return $statement->execute();
+        } catch (PDOException $ex) {
+            echo "Error al guardar el proyecto>" . $ex->getMessage();
+        }
     }
 
-    public function getById($id) {
-        $sql = "SELECT * FROM proyectos WHERE id_proyecto = :id";
-        $query = $this->db->prepare($sql);
-        $query->bindParam(":id", $id, PDO::PARAM_INT);
-        $query->execute();
-        return $query->fetch(PDO::FETCH_OBJ);
+    public function getProyecto($id)
+    {
+        try {
+            $sql = "SELECT * FROM $this->table WHERE id_proyecto=:id";
+            $statement = $this->dbConnection->prepare($sql);
+            $statement->bindParam(":id", $id, PDO::PARAM_INT);
+            $statement->execute();
+            return $statement->fetch(PDO::FETCH_OBJ);
+        } catch (PDOException $ex) {
+            echo "Error al obtener el proyecto>" . $ex->getMessage();
+        }
     }
 
-    public function create($nombre, $descripcion) {
-        $sql = "INSERT INTO proyectos (nombre, descripcion) VALUES (:nombre, :descripcion)";
-        $query = $this->db->prepare($sql);
-        $query->bindParam(":nombre", $nombre, PDO::PARAM_STR);
-        $query->bindParam(":descripcion", $descripcion, PDO::PARAM_STR);
-        return $query->execute();
+    public function editProyecto($id, $nombre)
+    {
+        try {
+            $sql = "UPDATE $this->table SET nombre=:nombre WHERE id_proyecto=:id";
+            $statement = $this->dbConnection->prepare($sql);
+            $statement->bindParam(":nombre", $nombre, PDO::PARAM_STR);
+            $statement->bindParam(":id", $id, PDO::PARAM_INT);
+            return $statement->execute();
+        } catch (PDOException $ex) {
+            echo "Error al editar el proyecto>" . $ex->getMessage();
+        }
     }
 
-    public function update($id, $nombre, $descripcion) {
-        $sql = "UPDATE proyectos SET nombre = :nombre, descripcion = :descripcion WHERE id_proyecto = :id";
-        $query = $this->db->prepare($sql);
-        $query->bindParam(":id", $id, PDO::PARAM_INT);
-        $query->bindParam(":nombre", $nombre, PDO::PARAM_STR);
-        $query->bindParam(":descripcion", $descripcion, PDO::PARAM_STR);
-        return $query->execute();
-    }
-
-    public function delete($id) {
-        $sql = "DELETE FROM proyectos WHERE id_proyecto = :id";
-        $query = $this->db->prepare($sql);
-        $query->bindParam(":id", $id, PDO::PARAM_INT);
-        return $query->execute();
+    public function removeProyecto($id) {
+        try {
+            $sql = "DELETE FROM $this->table WHERE id_proyecto=:id";
+            $statement = $this->dbConnection->prepare($sql);
+            $statement->bindParam(":id", $id, PDO::PARAM_INT);
+            return $statement->execute();
+        } catch (PDOException $ex) {
+            echo "No se pudo eliminar el proyecto: " . $ex->getMessage();
+            return false;
+        }
     }
 }
-?>

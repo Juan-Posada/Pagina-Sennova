@@ -20,13 +20,9 @@
                 </div>
                 <nav class="menu">
                     <ul>
-                        <li><a href=""><i class="fas fa-building"></i><span class="span">Personal Tecnico</span></a></li>
-                        <li><a href=""><i class="fas fa-dumbbell"></i><span class="span">Asesoria</span></a></li>
-                        <li><a href="><i class="fas fa-user-tag"></i><span class="span">Tipo Asesoria</span></a></li>
-                        <li><a href=""><i class="fas fa-running"></i><span class="span">Reunion</span></a></li>
-                        <li><a href=""><i class="fas fa-user"></i><span class="span">Eventos</span></a></li>
-                        <li><a href=""><i class="fas fa-users"></i><span class="span">Proyecto</span></a></li>
-                        <li><a href=""><i class="fas fa-id-badge"></i><span class="span">Aprendices</span></a></li>
+                        <li><a href="/proyecto/view"><i class="fas fa-users"></i><span class="span">Proyectos</span></a></li>
+                        <li><a href="/eventos/view"><i class="fas fa-user"></i><span class="span">Eventos</span></a></li>
+                        <li><a href="/aprendices/view"><i class="fas fa-id-badge"></i><span class="span">Aprendices</span></a></li>
                     </ul>
                 </nav>
             </div>

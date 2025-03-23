@@ -1,5 +1,8 @@
 <?php
 require_once '../app/config/global.php';
+require_once '../app/controllers/AprendicesController.php';
+require_once '../app/controllers/EventosController.php';
+require_once '../app/controllers/ProyectoController.php';
 
 $url = $_SERVER['REQUEST_URI']; //Lo que se ingresa en la URL
 $routes = include_once '../app/config/routes.php';

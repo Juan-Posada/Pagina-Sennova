@@ -5,13 +5,13 @@
         </div>
     </div>
     <div class="info">
-        <form action="/proyecto/create" method="post">
+        <form action="/proyecto/remove" method="post">
             <div class="form-group">
-                <label for="">Nombre del Proyecto:</label>
-                <input type="text" name="txtNombre" id="txtNombre" class="form-control" required>
+                <label>ID del Proyecto:</label>
+                <input type="text" readonly value="<?php echo $proyecto->id_proyecto ?>" name="txtId" class="form-control">
             </div>
             <div class="form-group">
-                <button type="submit">Guardar</button>
+                <button type="submit">Eliminar</button>
             </div>
         </form>
     </div>
