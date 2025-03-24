@@ -1,0 +1,397 @@
+header{
+    width: 100%;
+    height: 95px;
+    border-bottom: 2px solid #E9E9E9;
+    background-color: #FDFDFD;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+}
+
+div.logo-sennova, div.user{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.buttons-header{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+button.action{
+    color: #161616;
+    background-color: #CBEBB5;
+    font-weight: lighter;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    width: 130px;
+    height: 45px;
+    cursor: url('../image/pointer-cursor.png')  10 10, pointer;
+    transition: .2s all ease-in-out;
+}
+
+button.action:hover{
+    scale: 1.07;
+    background-color: rgb(200, 230, 180);
+}
+
+main.principal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 2048px;
+}
+
+section.one{
+    width: 100%;
+    height: 1024px;
+    display: flex;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media{
+    height: 80%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0px;
+}
+
+
+
+a.images-media{
+    width: 40px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: url('../image/pointer-cursor.png') 10 10, pointer;
+    transition: .3s all ease-in;
+    border: 2px solid black;
+}
+
+a.images-media:hover{
+    background-color: #f0f0f0;
+    scale: 1.1;
+}
+
+.vertical-line{
+    width: 1px;
+    height: 100%;
+    background-color: black;
+}
+
+.img-news{
+    height: 60%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.img-news-container{
+    width: 520px;
+    height: 520px;
+    background: url(../image/new.png) no-repeat center;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgb(129, 129, 129);
+}
+
+.news{
+    height: 60%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 45px 20px;
+}
+
+.title-news{
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    color: #000000;
+    font-size: 47px;
+    font-weight: bolder;
+    line-height: 60px;
+}
+
+.txt-news{
+    width: 100%;
+    height: 30%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 15px 0px;
+}
+
+h3{
+    font-size: 22px;
+    font-weight: normal;
+    color: #000000;
+}
+
+.buttons-info-news{
+    width: 100%;
+    height: 20%;
+    justify-content: start;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+button.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: center;
+    color: black;
+    width: 145px;
+    height: 78px;
+    border-radius: 10px;
+    cursor: url('../image/pointer-cursor.png') 10 10, pointer;
+    transition: .3s all ease-in-out;
+}
+
+
+
+button#view-more{
+    background-color: #F7FFF3;
+}
+
+button#view-more:hover{
+    scale: 1.1;
+    background-color: #eff3ec;
+}
+
+button#next{
+    background-color: #EAFDDD;
+}
+
+button#next:hover{
+    scale: 1.1;
+    background-color: #dcf7ca;
+}
+
+.info-content{
+    height: 80%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-info-content#one{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 90%;
+    height: 90%;
+    border-left: #033000 3px solid;
+    margin-left: 30px;
+    i{
+        text-align: start;
+        font-size: 40px;
+        font-weight: bold;
+        transform-origin: left top;
+        color: #033000;
+        white-space: nowrap;
+        transform: rotate(90deg);
+        position: relative;
+        left: 55px;
+    }
+}
+
+section.two{
+    width: 100%;
+    height: 1024px;
+    background-color: #e8f5e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+}
+
+.text-info-content#two{
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    width: 90%;
+    height: 90%;
+    border-right: #033000 3px solid;
+    margin-right: 30px;
+    i{
+        text-align: end;
+        font-size: 40px;
+        font-weight: bold;
+        transform-origin: left top;
+        color: #033000;
+        white-space: nowrap;
+        transform: rotate(270deg);
+        position: relative;
+        left: 75px;
+        top: 60px;
+    }
+}
+
+.lines-container{
+    width: 90%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+div.lines{
+    width: 70%;
+    height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.buttons-lines{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 10%;
+    width: 70%;
+    gap: 70px;
+}
+
+button.lines{
+    border: 2px solid black;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease-in-out;
+    cursor: url('../image/pointer-cursor.png') 10 10, pointer;
+}
+
+button.lines:hover{
+    scale: 1.1;
+    background-color: #d3e0cd;
+}
+
+.line-two, .line-three{
+    width: 270px;
+    height: 382px;
+    border-radius: 15px;
+    img{
+        width: 270px;
+        height: 382px;
+        cursor: url('../image/pointer-cursor.png') 10 10, pointer;
+    }
+}
+
+.line-one{
+    width: 310px;
+    height: 439px;
+    border-radius: 15px;
+    img{
+        width: 310px;
+        height: 439px;
+        cursor: url('../image/pointer-cursor.png') 10 10, pointer;
+    }
+}
+
+
+/* Add this to your style.css file */
+
+/* Animation for the sliding effect */
+@keyframes slideAnimation {
+    0% {
+        opacity: 0.7;
+        transform: translateX(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Class to apply the animation */
+.slide-animation {
+    animation: slideAnimation 1.5s ease-out forwards;
+}
+
+/* Make sure the images have consistent dimensions while transitioning */
+.line-one img, .line-two img, .line-three img {
+    transition: all 7.5s ease-in-out;
+}
+
+
+footer{
+    width: 100%;
+    height: 154px;
+    background-color: #527652;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-footer, .cpic{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: end;
+}
+
+.cpic{
+    padding: 0px 30px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.copy{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: light;
+
+}
+
